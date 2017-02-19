@@ -9,6 +9,11 @@ KEY_LEFT = 276
 
 KEY_A = 97
 
+# #Music
+# pygame.mixer.init()
+# pygame.mixer.music.load('Spiderman.ogg')
+# pygame.mixer.music.play(-1)
+
 #DEBUG
 def main2():
     # declare the size of the canvas
@@ -17,6 +22,17 @@ def main2():
     blue_color = (97, 159, 182)
 
     pygame.init()
+
+
+    # #Music
+    pygame.mixer.init()
+    pygame.mixer.music.load('fight.ogg')
+    pygame.mixer.music.play(-1)
+
+    #Sound effect
+    sound = pygame.mixer.Sound('punch.ogg')
+
+
     screen = pygame.display.set_mode((width, height))
     pygame.display.set_caption('Simple Example')
     clock = pygame.time.Clock()
@@ -32,12 +48,13 @@ def main2():
     hero_health = 30
     hero_damage = 4
 
-    orc_health = 20
+    orc_health = 30
     orc_damage = 2
 
     hero_message = ""
     orc_message = ""
-    health_message = "HP: %s/30" % hero_health
+    health_message = "Spider Man: %s/30HP" % hero_health
+    orc_health_message = "Rhino: %s/30HP" % orc_health
 
     stop_game = False
     while not stop_game and orc_health > 0 and hero_health > 0:
@@ -47,13 +64,15 @@ def main2():
                 if event.key == KEY_DOWN:
                     print "Invalid Input"
                 elif event.key == KEY_A:
+                    sound.play()
                     hero_damage = random.randrange(1,6)
                     orc_damage = random.randrange(1,4)
-                    hero_message = "You attack orc for %d damage!" % hero_damage
-                    orc_message = "Orc attacks you for %d damage!" % orc_damage
+                    hero_message = "You attack Rhino for %d damage!" % hero_damage
+                    orc_message = "Rhino attacks you for %d damage!" % orc_damage
                     orc_health -= hero_damage
                     hero_health -= orc_damage
-                    health_message = "HP: %s/30" %str(hero_health)
+                    health_message = "Spider Man: %s/30HP" %str(hero_health)
+                    orc_health_message = "Rhino: %s/30HP" %str(orc_health)
                 elif event.key == KEY_LEFT:
                     print "Invalid input"
                 elif event.key == KEY_RIGHT:
@@ -73,25 +92,27 @@ def main2():
         #200, 200, 100, 100
         pygame.draw.rect(screen, (0, 0, 0), (0, 400, 500, 100), 0)
         font = pygame.font.Font(None, 25)
-        text = font.render('You have encountered an orc!', True, (255, 255, 255))
+        text = font.render("Rhino: I'll destroy you Spiderman!", True, (255, 255, 255))
         #attack_text = font.render("Press UP to attack", True, (255, 255, 255))
         hero_attack_text = font.render(hero_message, True, (255, 255, 255))
         orc_attack_text = font.render(orc_message, True, (255, 0, 0))
         health_text = font.render(health_message, True, (255, 255, 255))
+        orc_health_text = font.render(orc_health_message, True, (255, 255, 255))
         screen.blit(text, (0, 400))
         #screen.blit(attack_text, (0, 450))
         screen.blit(hero_attack_text, (0, 440))
         screen.blit(orc_attack_text, (0, 460))
-        screen.blit(health_text, (400, 400))
+        screen.blit(health_text, (320, 400))
+        screen.blit(orc_health_text, (320, 420))
         pygame.display.update()
 
         clock.tick(60)
 
     if orc_health > 0:
-        print "You died."
+        #print "You died."
         print "You Lose!"
     elif hero_health > 0:
-        print "Orc died."
+        #print "Orc died."
         print "You Win!"
 
     pygame.quit()
@@ -243,6 +264,12 @@ def main():
     blue_color = (97, 159, 182)
 
     pygame.init()
+
+    #Music
+    pygame.mixer.init()
+    pygame.mixer.music.load('Spiderman.ogg')
+    pygame.mixer.music.play(-1)
+
     screen = pygame.display.set_mode((width, height))
     background_image = pygame.image.load('images/background.png').convert_alpha()
     monster = pygame.image.load('images/monster.png').convert_alpha()
