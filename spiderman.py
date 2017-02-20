@@ -166,10 +166,9 @@ def ending():
         for event in pygame.event.get():
             # Event handling
             if event.type == pygame.KEYDOWN:
-                if event.key == KEY_DOWN:
-                    print ""
-                elif event.key == KEY_Q:
-                    print ""
+                if event.key == KEY_Q:
+                    stop_game = True
+                elif event.key == KEY_S:
                     stop_game = True
                 elif event.key == KEY_LEFT:
                     print ""
@@ -230,7 +229,7 @@ def rhino_fight():
     orc_health = 20
     orc_damage = 2
 
-    hero_message = ""
+    hero_message = "Press A to attack"
     orc_message = ""
     health_message = "Spider Man: %s/30HP" % hero_health
     orc_health_message = "Rhino: %s/20HP" % orc_health
@@ -336,7 +335,7 @@ def lizard_fight():
     orc_health = 25
     orc_damage = 2
 
-    hero_message = ""
+    hero_message = "Press A to attack"
     orc_message = ""
     health_message = "Spider Man: %s/30HP" % hero_health
     orc_health_message = "The Lizard: %s/25HP" % orc_health
@@ -441,7 +440,7 @@ def sandman_fight():
     orc_health = 30
     orc_damage = 2
 
-    hero_message = ""
+    hero_message = "Press A to attack"
     orc_message = ""
     health_message = "Spider Man: %s/30HP" % hero_health
     orc_health_message = "Sandman: %s/30HP" % orc_health
@@ -455,7 +454,7 @@ def sandman_fight():
                     print "Invalid Input"
                 elif event.key == KEY_A:
                     sound.play()
-                    hero_damage = random.randrange(1,6)
+                    hero_damage = random.randrange(1,7)
                     orc_damage = random.randrange(1,4)
                     hero_message = "You attack Sandman for %d damage!" % hero_damage
                     orc_message = "Sandman attacks you for %d damage!" % orc_damage
