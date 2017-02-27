@@ -2,6 +2,8 @@ import pygame
 import random
 import time
 
+#This makes the ASCII codes of each key press avaiable by usign a more obvious
+#variable name instead of a number
 KEY_UP = 273
 KEY_DOWN = 274
 KEY_RIGHT = 275
@@ -11,32 +13,30 @@ KEY_Q = 113
 KEY_S = 115
 
 
-# #Music
-# pygame.mixer.init()
-# pygame.mixer.music.load('Spiderman.ogg')
-# pygame.mixer.music.play(-1)
+#The game is made of switching between different scenes, and each scene is its
+#own function. The game goes from function to functions
 
-####intro
-
+#This function is the intro scene.
 def intro():
-    width = 500
+    width = 500         #This sets the width and height of the intro scene
     height = 500
 
-    pygame.init()
+    pygame.init()       #This starts pygame
 
-    #Music
+    #Music - This loads the music from the spiderman cartoon and plays in a loop
     pygame.mixer.init()
     pygame.mixer.music.load('90s_Spiderman.ogg')
     pygame.mixer.music.play(-1)
 
+    #This sets the screen to be equal to the size we set
     screen = pygame.display.set_mode((width, height))
     background_image = pygame.image.load('images/intro_background.png').convert_alpha()
     pygame.display.set_caption('Spiderman Game')
     clock = pygame.time.Clock()
 
-
+    #This is the text that will appear at the bottom of the screen
     intro_message = "Press S to Play"
-    change_dir_countdown = 120
+    #change_dir_countdown = 120
 
     # Game initialization
     stop_game = False
@@ -48,7 +48,7 @@ def intro():
                     print ""
                 elif event.key == KEY_S:
                     print ""
-                    stop_game = True
+                    stop_game = True    #This is the only key that leaves the scene
                 elif event.key == KEY_LEFT:
                     print ""
                 elif event.key == KEY_RIGHT:
@@ -57,11 +57,11 @@ def intro():
                 stop_game = True
 
 
-        screen.blit(background_image, (0,0))
+        screen.blit(background_image, (0,0))   #This sets the scene to the intro
 
-        font = pygame.font.Font(None, 25)
+        font = pygame.font.Font(None, 25)      #No font specifically
         intro_text = font.render(intro_message, True, (255, 255, 255))
-        screen.blit(intro_text, (100, 440))
+        screen.blit(intro_text, (100, 440))     #This puts the text onto the screen
 
 
         # Game display
@@ -75,7 +75,7 @@ def intro():
 
 
 
-##Thumbs Up
+#This function is the scene that shows when you win a battle
 def thumbs_up():
     width = 500
     height = 500
@@ -100,7 +100,7 @@ def thumbs_up():
 
     thumbs_up_message = "You won!"
     intro_message = "Press S to Continue"
-    change_dir_countdown = 120
+    #change_dir_countdown = 120
 
     # Game initialization
     stop_game = False
@@ -138,8 +138,8 @@ def thumbs_up():
 
 ####end of Thumbs up
 
-####ending
 
+#This function shows the end scene
 def ending():
     width = 500
     height = 500
@@ -158,7 +158,7 @@ def ending():
 
 
     ending_message = "You Win!"
-    change_dir_countdown = 120
+    #change_dir_countdown = 120
 
     # Game initialization
     stop_game = False
