@@ -16,7 +16,8 @@ Level map
 ![Level Map](https://github.com/justinuzoije/spiderman-game/blob/master/images/rhino_background.png)
 
 Fight screen
-<!-- ![Fight Screen](https://github.com/justinuzoije/spiderman-game/blob/master/images/fight_screen_readme.png) -->
+![Fight Screen](https://github.com/justinuzoije/spiderman-game/blob/master/images/fight_screen_readme.png)
+
 
 ### Code Examples
 
