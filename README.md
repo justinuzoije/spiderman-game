@@ -19,9 +19,10 @@ Here is a screenshot of the fight screen
 ### Code Examples
 
 This is the function that creates the level map that the player is walking around.
+![Level Map](https://github.com/justinuzoije/spiderman-game/blob/master/images/rhino_background.png)
 
 ```
-#Screen
+    #Screen
     width = 512
     height = 480
     blue_color = (97, 159, 182)
