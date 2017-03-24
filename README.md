@@ -12,14 +12,16 @@ To get the game running, download the files and run the spiderman python file.
 
 ## Screenshots
 
-Here is a screenshot of the map
+Level map
+![Level Map](https://github.com/justinuzoije/spiderman-game/blob/master/images/rhino_background.png)
 
-Here is a screenshot of the fight screen
+Fight screen
+![Fight Screen](https://github.com/justinuzoije/spiderman-game/blob/master/images/fight_screen_readme.png)
 
 ### Code Examples
 
 This is the function that creates the level map that the player is walking around.
-![Level Map](https://github.com/justinuzoije/spiderman-game/blob/master/images/rhino_background.png)
+
 
 ```
     #Screen
