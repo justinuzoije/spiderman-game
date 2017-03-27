@@ -18,8 +18,6 @@ Intro Screen
 
 ![Intro](intro.jpg)
 
-<img src="intro.jpg" alt="Intro" style="width: 400px;"/>
-
 Rhino Level Map
 
 ![Rhino Map](map1.jpg)
