@@ -18,31 +18,31 @@ Intro Screen
 
 ![Intro](intro.jpg)
 
-Rhino Level Map
+Rhino Level
 
 ![Rhino Map](map1.jpg)
 
 
-Lizard Level Map
+Lizard Level
 
 ![Lizard Map](map2.jpg)
 
 
-Sandman Level Map
+Sandman Level
 
 ![Sandman Map](map3.jpg)
 
 
 
-Rhino Fight Screen
+Rhino Fight
 
 ![Rhino Fight](fight1.jpg)
 
-Lizard Fight Screen
+Lizard Fight
 
 ![Lizard Fight](fight2.jpg)
 
-Sandman Fight Scren
+Sandman Fight
 
 ![Sandman Fight](fight3.jpg)
 
