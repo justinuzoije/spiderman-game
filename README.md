@@ -49,8 +49,9 @@ Sandman Fight
 
 ## Code Examples
 
-The game is made up of different scenes, which include the creation of the map, the starting position of the characters,
-and the game logic of level. The level map is created by setting the width and height of the entire screen before running Pygame's init function, which initializes Pygame. The picture of Spiderman, the level, the villain and the stage music are loaded at the start, and a clock is created using Pygame's clock method so that we can keep track of the game's framerate.
+The game is made up of different scenes, which include the creation of the map, the starting position of the characters, and the game logic of level. The level map is created by setting the width and height of the entire screen before running Pygame's init function, which initializes Pygame.
+
+The picture of Spiderman, the level, the villain and the stage music are loaded at the start, and a clock is created using Pygame's clock method so that we can keep track of the game's framerate.
 
 ```
 
@@ -76,7 +77,9 @@ and the game logic of level. The level map is created by setting the width and h
 
 ```
 
-Both the character the player controls and the enemy moving on the stage are Character objects which get an initial starting position on the screen using x and y coordinates, a boolean value representing if they are dead or alive, as well as a small picture of themselves. The These characters move across the screen by incrementing their x and y positions by small amounts every second.
+Both the character the player controls and the enemy moving on the stage are Character objects which get an initial starting position on the screen using x and y coordinates, a boolean value representing if they are dead or alive, as well as a small picture of themselves.
+
+The These characters move across the screen by incrementing their x and y positions by small amounts every second.
 
 ```
 
@@ -102,7 +105,9 @@ Both the character the player controls and the enemy moving on the stage are Cha
 
 ```
 
-The enemy's random movement is created by assigning a number to North, South, East, West, NE, NW, SW, and SE. The function creates a random number, and makes the enemy move in that direction for a second, making them move randomly around the map. The villain's random directions are switched based on the framerate.
+The enemy's random movement is created by assigning a number to North, South, East, West, NE, NW, SW, and SE. The function creates a random number, and makes the enemy move in that direction for a second, making them move randomly around the map.
+
+The villain's random directions are switched based on the framerate.
 
 ```
 
@@ -185,9 +190,11 @@ each frame.
 
 ```
 
-The fight scenes are made by creating a new level with the top portion of the screen dedicated to an image of Spiderman fighting
-the villain. The bottom portion is reserved for updating text variables each time the player attacks the enemy. The hero and villain get a
-an attack value that's a random number. That number is subtracted from their health when they fight. Each hit lowers both the hero and villain's health, and this information is updated to the bottom screen to let the player see how the fight is progressing. The battle ends when either character's health drops below 0.
+The fight scenes are made by creating a new level with the top portion of the screen dedicated to an image of Spiderman fighting the villain. The bottom portion is reserved for updating text variables each time the player attacks the enemy.
+
+The hero and villain get an attack value that's a random number. That number is subtracted from their health when they fight. Each hit lowers both the hero and villain's health, and this information is updated to the bottom screen to let the player see how the fight is progressing.
+
+The battle ends when either character's health drops below 0.
 
 ```
 
