@@ -12,6 +12,10 @@ To get the game running, download the files and run the spiderman python file.
 
 ## Screenshots
 
+Intro Screen
+
+![Intro](intro.jpg)
+
 Rhino Level Map
 
 ![Rhino Map](map1.jpg)
