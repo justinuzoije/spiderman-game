@@ -1,3 +1,5 @@
+
+
 # Spider Man Game
 
 This is a top-down game where you move the character around the map in order to fight
@@ -15,6 +17,8 @@ To get the game running, download the files and run the spiderman python file.
 Intro Screen
 
 ![Intro](intro.jpg)
+
+<img src="intro.jpg" alt="Intro" style="width: 400px;"/>
 
 Rhino Level Map
 
