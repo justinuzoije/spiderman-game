@@ -200,7 +200,7 @@ def rhino_fight():
     # declare the size of the canvas
     width = 500
     height = 500
-    blue_color = (97, 159, 182)
+
 
     pygame.init()
 
@@ -261,7 +261,7 @@ def rhino_fight():
         # Game logic
 
         # Draw background
-        screen.fill(blue_color)
+        # screen.fill(blue_color)
 
         # Game display
 
@@ -303,7 +303,7 @@ def lizard_fight():
     # declare the size of the canvas
     width = 500
     height = 500
-    blue_color = (97, 159, 182)
+
 
     pygame.init()
 
@@ -367,7 +367,7 @@ def lizard_fight():
         # Game logic
 
         # Draw background
-        screen.fill(blue_color)
+        # screen.fill(blue_color)
 
         # Game display
 
@@ -408,7 +408,7 @@ def sandman_fight():
     # declare the size of the canvas
     width = 500
     height = 500
-    blue_color = (97, 159, 182)
+
 
     pygame.init()
 
@@ -472,7 +472,7 @@ def sandman_fight():
         # Game logic
 
         # Draw background
-        screen.fill(blue_color)
+        # screen.fill(blue_color)
 
         # Game display
 
@@ -571,22 +571,22 @@ def rhino():
 
         def off_screen(self):
             if self.y < 0:      #top
-                self.y =  480
+                self.y =  500
             else:
                 self.y -= 5
 
-            if self.x > 512:    #right
+            if self.x > 500:    #right
                 self.x = 0
             else:
                 self.x += 5
 
-            if self.y > 480:     #down
+            if self.y > 500:     #down
                 self.y =  0
             else:
                 self.y += 5
 
             if self.x < 0:       #left
-                self.x =  512
+                self.x =  500
             else:
                 self.x -= 5
 
@@ -614,23 +614,38 @@ def rhino():
             self.x += self.speed_x
             self.y += self.speed_y
 
+        # def off_screen(self):
+        #     if self.y < 31:      #top
+        #         self.y = 31
+        #
+        #     if self.x > 450:    #right
+        #         self.x = 450
+        #
+        #     if self.y > 418:     #down
+        #         self.y =  418
+        #
+        #     if self.x < 31:       #left
+        #         self.x =  31
+
+        # Spiderman
         def off_screen(self):
-            if self.y < 31:      #top
-                self.y = 31
+            if self.y < 0:      #top
+                self.y = 0
 
-            if self.x > 450:    #right
-                self.x = 450
+            if self.x > 460:    #right
+                self.x = 460
 
-            if self.y > 418:     #down
-                self.y =  418
+            if self.y >= 445:     #down
+                self.y =  445
 
-            if self.x < 31:       #left
-                self.x =  31
+            if self.x < 0:       #left
+                self.x =  0
+
 
     #Screen
-    width = 512
-    height = 480
-    blue_color = (97, 159, 182)
+    width = 500
+    height = 500
+    # blue_color = (97, 159, 182)
 
     pygame.init()
 
@@ -730,7 +745,7 @@ def rhino():
         # Game logic
         ball.update()
 
-        screen.fill(blue_color)
+        # screen.fill(blue_color)
 
         screen.blit(background_image, (0,0))
         # screen.blit(monster, (monster.x,monster.y))
@@ -809,22 +824,22 @@ def lizard():
 
         def off_screen(self):
             if self.y < 0:      #top
-                self.y =  480
+                self.y =  500
             else:
                 self.y -= 5
 
-            if self.x > 512:    #right
+            if self.x > 500:    #right
                 self.x = 0
             else:
                 self.x += 5
 
-            if self.y > 480:     #down
+            if self.y > 500:     #down
                 self.y =  0
             else:
                 self.y += 5
 
             if self.x < 0:       #left
-                self.x =  512
+                self.x =  500
             else:
                 self.x -= 5
 
@@ -852,23 +867,37 @@ def lizard():
             self.x += self.speed_x
             self.y += self.speed_y
 
+        # def off_screen(self):
+        #     if self.y < 0:      #top
+        #         self.y = 0
+        #
+        #     if self.x > 500:    #right
+        #         self.x = 500
+        #
+        #     if self.y > 500:     #down
+        #         self.y =  500
+        #
+        #     if self.x < 0:       #left
+        #         self.x =  0
+
+        # Spiderman
         def off_screen(self):
-            if self.y < 31:      #top
-                self.y = 31
+            if self.y < 0:      #top
+                self.y = 0
 
-            if self.x > 450:    #right
-                self.x = 450
+            if self.x > 460:    #right
+                self.x = 460
 
-            if self.y > 418:     #down
-                self.y =  418
+            if self.y >= 445:     #down
+                self.y =  445
 
-            if self.x < 31:       #left
-                self.x =  31
+            if self.x < 0:       #left
+                self.x =  0
 
     #Screen
-    width = 512
-    height = 480
-    blue_color = (97, 159, 182)
+    width = 500
+    height = 500
+    # blue_color = (97, 159, 182)
 
     pygame.init()
 
@@ -1048,22 +1077,22 @@ def sandman():
 
         def off_screen(self):
             if self.y < 0:      #top
-                self.y =  480
+                self.y =  500
             else:
                 self.y -= 5
 
-            if self.x > 512:    #right
+            if self.x > 500:    #right
                 self.x = 0
             else:
                 self.x += 5
 
-            if self.y > 480:     #down
+            if self.y > 500:     #down
                 self.y =  0
             else:
                 self.y += 5
 
             if self.x < 0:       #left
-                self.x =  512
+                self.x =  500
             else:
                 self.x -= 5
 
@@ -1091,23 +1120,38 @@ def sandman():
             self.x += self.speed_x
             self.y += self.speed_y
 
+        # def off_screen(self):
+        #     if self.y < 0:      #top
+        #         self.y = 0
+        #
+        #     if self.x > 500:    #right
+        #         self.x = 500
+        #
+        #     if self.y > 500:     #down
+        #         self.y =  500
+        #
+        #     if self.x < 0:       #left
+        #         self.x =  0
+
+        # Spiderman
         def off_screen(self):
-            if self.y < 31:      #top
-                self.y = 31
+            if self.y < 0:      #top
+                self.y = 0
 
-            if self.x > 450:    #right
-                self.x = 450
+            if self.x > 460:    #right
+                self.x = 460
 
-            if self.y > 418:     #down
-                self.y =  418
+            if self.y >= 445:     #down
+                self.y =  445
 
-            if self.x < 31:       #left
-                self.x =  31
+            if self.x < 0:       #left
+                self.x =  0
+
 
     #Screen
-    width = 512
-    height = 480
-    blue_color = (97, 159, 182)
+    width = 500
+    height = 500
+    # blue_color = (97, 159, 182)
 
     pygame.init()
 
