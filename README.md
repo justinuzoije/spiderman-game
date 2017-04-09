@@ -83,7 +83,7 @@ The picture of Spiderman, the level, the villain and the stage music are loaded 
 
 Both the character the player controls and the enemy moving on the stage are Character objects which get an initial starting position on the screen using x and y coordinates, a boolean value representing if they are dead or alive, as well as a small picture of themselves.
 
-The These characters move across the screen by incrementing their x and y positions by small amounts every second.
+The characters move across the screen by incrementing their x and y positions by small amounts every second.
 
 ```
 
