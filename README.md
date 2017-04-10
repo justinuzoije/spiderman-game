@@ -14,7 +14,7 @@ To get the game running, download the files and run the spiderman python file.
 
 ## Video of Gameplay
 
-<a href="https://youtu.be/FxJbjC0VJW0" target="_blank"><img src="https://img.youtube.com/vi/FxJbjC0VJW0/0.jpg" width="240" height="180" border="10"/></a>
+<a href="https://youtu.be/FxJbjC0VJW0" target="_blank"><img src="https://img.youtube.com/vi/FxJbjC0VJW0/0.jpg" width="240" height="180"/></a>
 
 ## Screenshots
 
